@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Currículum profesional de Gerardo López, desarrollador Full Stack e ingeniero en sistemas.">
+    <meta name="description" content="Currículum profesional de Alan Velázquez Díaz, estudiante de Ingeniería en Sistemas Computacionales.">
 
-    <title>Gerardo López | Currículum Profesional</title>
+    <title>Alan Velázquez Díaz | Currículum Profesional</title>
 
     <!-- Bulma CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
@@ -23,17 +23,17 @@
 
     <style>
         :root {
-            --color-fondo: #071322;
-            --color-fondo-secundario: #0d1c2e;
-            --color-tarjeta: #10243a;
-            --color-tarjeta-clara: #f4f7fb;
-            --color-verde: #c7ff4a;
-            --color-verde-oscuro: #9ad629;
-            --color-azul: #5e9cff;
+            --color-fondo: #1a1025;
+            --color-fondo-secundario: #241534;
+            --color-tarjeta: #2b1840;
+            --color-tarjeta-clara: #faf7f5;
+            --color-verde: #ff8a5c;
+            --color-verde-oscuro: #f2683a;
+            --color-azul: #a78bfa;
             --color-blanco: #ffffff;
-            --color-texto: #d6e0eb;
-            --color-texto-oscuro: #182536;
-            --color-gris: #93a4b7;
+            --color-texto: #e4d9f0;
+            --color-texto-oscuro: #241534;
+            --color-gris: #a695b8;
             --color-borde: rgba(255, 255, 255, 0.12);
             --radio: 24px;
         }
@@ -185,6 +185,22 @@
             object-position: center;
             border: 5px solid rgba(255, 255, 255, 0.12);
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+        }
+
+        .profile-photo-placeholder {
+            width: 245px;
+            height: 245px;
+            border-radius: 32px;
+            border: 5px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+            display: grid;
+            place-items: center;
+            background: linear-gradient(135deg, var(--color-verde), var(--color-azul));
+            color: var(--color-fondo);
+            font-family: "Space Grotesk", sans-serif;
+            font-weight: 800;
+            font-size: 3.4rem;
+            letter-spacing: -0.03em;
         }
 
         .available-badge {
@@ -533,16 +549,14 @@
         }
 
         .project-grid,
-        .competency-grid,
-        .course-grid {
+        .competency-grid {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 18px;
         }
 
         .project-card,
-        .competency-card,
-        .course-card {
+        .competency-card {
             height: 100%;
             border: 1px solid #dce4ee;
             border-radius: 18px;
@@ -555,8 +569,7 @@
         }
 
         .project-card:hover,
-        .competency-card:hover,
-        .course-card:hover {
+        .competency-card:hover {
             transform: translateY(-4px);
             border-color: var(--color-azul);
             box-shadow: 0 15px 35px rgba(22, 42, 68, 0.1);
@@ -577,8 +590,7 @@
         }
 
         .project-title,
-        .competency-title,
-        .course-title {
+        .competency-title {
             color: var(--color-texto-oscuro);
             font-family: "Space Grotesk", sans-serif;
             font-size: 1rem;
@@ -594,11 +606,24 @@
         }
 
         .project-description,
-        .competency-description,
-        .course-description {
+        .competency-description {
             color: #627286;
             font-size: 0.9rem;
             line-height: 1.65;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            margin-top: 14px;
+            color: #3f78ce;
+            font-size: 0.82rem;
+            font-weight: 800;
+        }
+
+        .project-link:hover {
+            color: var(--color-verde-oscuro);
         }
 
         .competency-icon {
@@ -611,23 +636,6 @@
             background-color: #edf4ff;
             color: #3676d3;
             font-size: 1.2rem;
-        }
-
-        .course-card {
-            display: flex;
-            gap: 15px;
-            align-items: flex-start;
-        }
-
-        .course-icon {
-            display: grid;
-            place-items: center;
-            width: 42px;
-            height: 42px;
-            flex-shrink: 0;
-            border-radius: 12px;
-            background-color: var(--color-verde);
-            color: var(--color-fondo);
         }
 
         .footer-text {
@@ -647,14 +655,14 @@
             }
 
             .profile-photo-container,
-            .profile-photo {
+            .profile-photo,
+            .profile-photo-placeholder {
                 width: 205px;
                 height: 205px;
             }
 
             .project-grid,
-            .competency-grid,
-            .course-grid {
+            .competency-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -749,9 +757,14 @@
             }
 
             .profile-photo-container,
-            .profile-photo {
+            .profile-photo,
+            .profile-photo-placeholder {
                 width: 145px;
                 height: 145px;
+            }
+
+            .profile-photo-placeholder {
+                font-size: 2.1rem;
             }
 
             .hero-name {
@@ -800,16 +813,14 @@
 
             .timeline-item,
             .project-card,
-            .competency-card,
-            .course-card {
+            .competency-card {
                 break-inside: avoid;
             }
 
             .profile-text,
             .timeline-description,
             .project-description,
-            .competency-description,
-            .course-description {
+            .competency-description {
                 font-size: 0.76rem;
                 line-height: 1.45;
             }
@@ -821,8 +832,7 @@
             }
 
             .project-grid,
-            .competency-grid,
-            .course-grid {
+            .competency-grid {
                 gap: 8px;
             }
         }
@@ -838,7 +848,7 @@
 
             <div class="brand">
                 <span class="brand-symbol">
-                    GL
+                    AV
                 </span>
 
                 <span class="brand-text">
@@ -871,11 +881,12 @@
 
                     <div class="profile-photo-container">
 
-                        <img
-                            class="profile-photo"
-                            src="https://i.abcnewsfe.com/a/a9f91b3e-be84-4ed4-a71b-24c8b3671a80/john-wick-ht-bb-230216_1676562305682_hpMain_1x1.jpg?w=992"
-                            alt="Fotografía profesional de Gerardo López"
-                        >
+                        <!-- NOTA PARA ALAN: reemplaza este bloque por tu foto real.
+                             Cambia <div class="profile-photo-placeholder">AVD</div>
+                             por: <img class="profile-photo" src="TU-FOTO.jpg" alt="Fotografía de Alan Velázquez Díaz"> -->
+                        <div class="profile-photo-placeholder">
+                            AVD
+                        </div>
 
                         <span class="available-badge">
                             <span class="available-dot"></span>
@@ -889,53 +900,44 @@
                 <div class="column is-8">
 
                     <span class="hero-kicker">
-                        Ingeniero en sistemas
+                        Estudiante de Ingeniería en Sistemas Computacionales
                     </span>
 
                     <h1 class="hero-name">
-                        Gerardo<br>
-                        López
+                        Alan<br>
+                        Velázquez Díaz
                     </h1>
 
                     <p class="hero-profession">
-                        Desarrollador Full Stack y especialista en sistemas
+                        Desarrollador de Software y Gestor de Bases de Datos
                     </p>
 
                     <p class="hero-description">
-                        Profesional de tecnologías de la información con
-                        experiencia en desarrollo de aplicaciones web,
-                        administración de bases de datos, infraestructura,
-                        servicios en la nube y sistemas empresariales.
+                        Estudiante de Ingeniería en Sistemas Computacionales en el
+                        Instituto Tecnológico Nacional de México en Celaya, con
+                        experiencia en desarrollo de software, administración de
+                        bases de datos, creación de aplicaciones de escritorio y
+                        liderazgo de equipos de trabajo en proyectos académicos.
                     </p>
 
                     <div class="hero-links">
 
                         <a
                             class="hero-link"
-                            href="mailto:correo@ejemplo.com"
+                            href="mailto:ghostdiaz616@gmail.com"
                         >
                             <i class="fa-solid fa-envelope"></i>
-                            correo@ejemplo.com
+                            ghostdiaz616@gmail.com
                         </a>
 
                         <a
                             class="hero-link"
-                            href="https://github.com/usuario"
+                            href="https://github.com/AlanVD6"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
                             <i class="fa-brands fa-github"></i>
                             GitHub
-                        </a>
-
-                        <a
-                            class="hero-link"
-                            href="https://www.linkedin.com/in/usuario"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <i class="fa-brands fa-linkedin"></i>
-                            LinkedIn
                         </a>
 
                     </div>
@@ -970,8 +972,9 @@
                             <i class="fa-solid fa-phone"></i>
                         </span>
 
+                        <!-- NOTA: agrega aquí tu número de teléfono -->
                         <span>
-                            +52 000 000 0000
+                            +52 XXX XXX XXXX
                         </span>
 
                     </div>
@@ -982,8 +985,8 @@
                             <i class="fa-solid fa-envelope"></i>
                         </span>
 
-                        <a href="mailto:correo@ejemplo.com">
-                            correo@ejemplo.com
+                        <a href="mailto:ghostdiaz616@gmail.com">
+                            ghostdiaz616@gmail.com
                         </a>
 
                     </div>
@@ -995,7 +998,7 @@
                         </span>
 
                         <span>
-                            Querétaro, México
+                            Celaya, Guanajuato, México
                         </span>
 
                     </div>
@@ -1007,27 +1010,11 @@
                         </span>
 
                         <a
-                            href="https://github.com/usuario"
+                            href="https://github.com/AlanVD6"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            github.com/usuario
-                        </a>
-
-                    </div>
-
-                    <div class="contact-row">
-
-                        <span class="icon">
-                            <i class="fa-brands fa-linkedin"></i>
-                        </span>
-
-                        <a
-                            href="https://www.linkedin.com/in/usuario"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            linkedin.com/in/usuario
+                            github.com/AlanVD6
                         </a>
 
                     </div>
@@ -1050,43 +1037,43 @@
                     <div class="skill-tags">
 
                         <span class="skill-tag highlight">
-                            PHP
+                            Java
                         </span>
 
                         <span class="skill-tag highlight">
+                            Python
+                        </span>
+
+                        <span class="skill-tag highlight">
+                            PostgreSQL
+                        </span>
+
+                        <span class="skill-tag highlight">
+                            GitHub
+                        </span>
+
+                        <span class="skill-tag">
+                            ANTLR4
+                        </span>
+
+                        <span class="skill-tag">
+                            SQL
+                        </span>
+
+                        <span class="skill-tag">
+                            Streamlit
+                        </span>
+
+                        <span class="skill-tag">
                             Laravel
                         </span>
 
-                        <span class="skill-tag highlight">
+                        <span class="skill-tag">
                             Vue.js
                         </span>
 
                         <span class="skill-tag">
-                            React
-                        </span>
-
-                        <span class="skill-tag">
-                            Angular
-                        </span>
-
-                        <span class="skill-tag">
-                            JavaScript
-                        </span>
-
-                        <span class="skill-tag">
-                            TypeScript
-                        </span>
-
-                        <span class="skill-tag">
-                            Node.js
-                        </span>
-
-                        <span class="skill-tag">
-                            Bulma
-                        </span>
-
-                        <span class="skill-tag">
-                            Tailwind CSS
+                            Git
                         </span>
 
                         <span class="skill-tag">
@@ -1097,99 +1084,43 @@
                             CSS3
                         </span>
 
-                        <span class="skill-tag">
-                            PostgreSQL
-                        </span>
-
-                        <span class="skill-tag">
-                            MySQL
-                        </span>
-
-                        <span class="skill-tag">
-                            SQL Server
-                        </span>
-
-                        <span class="skill-tag">
-                            MongoDB
-                        </span>
-
-                        <span class="skill-tag">
-                            REST API
-                        </span>
-
-                        <span class="skill-tag">
-                            Git
-                        </span>
-
-                        <span class="skill-tag">
-                            GitHub
-                        </span>
-
-                        <span class="skill-tag">
-                            Docker
-                        </span>
-
-                        <span class="skill-tag">
-                            Linux
-                        </span>
-
-                        <span class="skill-tag highlight">
-                            AWS
-                        </span>
-
                     </div>
 
                 </section>
 
-                <!-- Sistemas empresariales -->
+                <!-- Herramientas y entornos -->
                 <section class="sidebar-card">
 
                     <h2 class="card-heading">
 
                         <span class="card-heading-icon">
-                            <i class="fa-solid fa-building"></i>
+                            <i class="fa-solid fa-toolbox"></i>
                         </span>
 
-                        Sistemas empresariales
+                        Herramientas y entornos
 
                     </h2>
 
                     <div class="skill-tags">
 
-                        <span class="skill-tag highlight">
-                            SAP
-                        </span>
-
-                        <span class="skill-tag highlight">
-                            CONTPAQi
-                        </span>
-
-                        <span class="skill-tag highlight">
-                            SICAR
+                        <span class="skill-tag">
+                            VS Code
                         </span>
 
                         <span class="skill-tag">
-                            Power BI
+                            PowerShell
                         </span>
 
                         <span class="skill-tag">
-                            Excel avanzado
+                            Windows
                         </span>
 
                         <span class="skill-tag">
-                            Microsoft 365
+                            Git / GitHub
                         </span>
 
                         <span class="skill-tag">
-                            Jira
-                        </span>
-
-                        <span class="skill-tag">
-                            Trello
-                        </span>
-
-                        <span class="skill-tag">
-                            Postman
+                            Control de versiones
                         </span>
 
                     </div>
@@ -1243,7 +1174,7 @@
                             </span>
 
                             <span class="language-level">
-                                Intermedio
+                                B1
                             </span>
 
                         </div>
@@ -1252,7 +1183,7 @@
 
                             <div
                                 class="language-value"
-                                style="width: 65%;"
+                                style="width: 55%;"
                             ></div>
 
                         </div>
@@ -1279,7 +1210,7 @@
                         <i class="fa-solid fa-check"></i>
 
                         <span>
-                            Disponibilidad inmediata
+                            Disponibilidad para prácticas profesionales
                         </span>
 
                     </div>
@@ -1289,7 +1220,7 @@
                         <i class="fa-solid fa-check"></i>
 
                         <span>
-                            Trabajo presencial, híbrido o remoto
+                            Experiencia en trabajo en equipo y liderazgo
                         </span>
 
                     </div>
@@ -1299,7 +1230,7 @@
                         <i class="fa-solid fa-check"></i>
 
                         <span>
-                            Administración de servidores
+                            Manejo de bases de datos
                         </span>
 
                     </div>
@@ -1309,7 +1240,7 @@
                         <i class="fa-solid fa-check"></i>
 
                         <span>
-                            Disponibilidad para viajar
+                            Desarrollo de aplicaciones de escritorio
                         </span>
 
                     </div>
@@ -1331,36 +1262,37 @@
                     <div class="profile-text">
 
                         <p>
-                            Ingeniero en sistemas con experiencia en análisis,
-                            desarrollo, implementación y mantenimiento de
-                            soluciones tecnológicas. Especializado en sistemas
-                            web con PHP, Laravel, JavaScript, Vue.js, React,
-                            Angular y bases de datos relacionales.
+                            Estudiante de Ingeniería en Sistemas Computacionales
+                            en el Instituto Tecnológico Nacional de México en
+                            Celaya, con experiencia práctica en desarrollo de
+                            software, administración de bases de datos y
+                            creación de aplicaciones de escritorio con Python
+                            y Java.
                         </p>
 
                         <p>
-                            Experiencia en servicios en la nube con AWS,
-                            integración de APIs REST, administración de
-                            servidores Linux, control de versiones con Git y
-                            GitHub, generación de documentos digitales y
-                            automatización de procesos.
+                            Experiencia en el desarrollo de un compilador de
+                            consultas SQL utilizando ANTLR4, Python y Streamlit,
+                            aplicando conceptos de análisis léxico, sintáctico
+                            y semántico de lenguajes formales.
                         </p>
 
                         <p>
-                            Conocimientos en sistemas empresariales y
-                            administrativos como SAP, CONTPAQi, SICAR,
-                            Microsoft 365, Excel avanzado y Power BI.
+                            Capacidad de liderazgo comprobada en proyectos de
+                            equipo, coordinando el desarrollo y la documentación
+                            técnica de sistemas web con Laravel, Vue.js y
+                            PostgreSQL.
                         </p>
 
                     </div>
 
                 </section>
 
-                <!-- Experiencia -->
+                <!-- Prácticas estudiantiles -->
                 <section class="content-card">
 
                     <h2 class="content-heading">
-                        Experiencia profesional
+                        Prácticas estudiantiles
                     </h2>
 
                     <article class="timeline-item">
@@ -1370,17 +1302,17 @@
                             <div>
 
                                 <h3 class="timeline-title">
-                                    Desarrollador Full Stack
+                                    Desarrollador y Líder Técnico de Equipo
                                 </h3>
 
                                 <p class="timeline-company">
-                                    Nombre de la empresa o institución
+                                    Proyecto de Panel de Proveedores — Instituto Tecnológico Nacional de México en Celaya
                                 </p>
 
                             </div>
 
                             <span class="timeline-date">
-                                2024 - Actualidad
+                                2025
                             </span>
 
                         </div>
@@ -1389,91 +1321,25 @@
 
                             <ul>
                                 <li>
-                                    Desarrollo y mantenimiento de sistemas web
-                                    con Laravel, Vue.js, React y Bulma.
+                                    Desarrollo de módulos con Laravel y Vue 3
+                                    (Inertia.js) para un panel de operaciones
+                                    de proveedores.
                                 </li>
 
                                 <li>
-                                    Diseño y optimización de bases de datos
-                                    PostgreSQL, MySQL y SQL Server.
+                                    Diseño y administración de la base de datos
+                                    en PostgreSQL del proyecto.
                                 </li>
 
                                 <li>
-                                    Creación e integración de APIs REST y
-                                    servicios web.
+                                    Elaboración de documentación técnica (SRS)
+                                    siguiendo la estructura y estándares del
+                                    curso.
                                 </li>
 
                                 <li>
-                                    Implementación de módulos administrativos,
-                                    escolares, financieros y empresariales.
-                                </li>
-
-                                <li>
-                                    Despliegue de servicios y aplicaciones en AWS.
-                                </li>
-
-                                <li>
-                                    Generación de documentos PDF, códigos QR,
-                                    reportes y comprobantes digitales.
-                                </li>
-                            </ul>
-
-                        </div>
-
-                    </article>
-
-                    <article class="timeline-item">
-
-                        <div class="timeline-header">
-
-                            <div>
-
-                                <h3 class="timeline-title">
-                                    Administrador de sistemas y soporte técnico
-                                </h3>
-
-                                <p class="timeline-company">
-                                    Nombre de la empresa o institución
-                                </p>
-
-                            </div>
-
-                            <span class="timeline-date">
-                                2022 - 2023
-                            </span>
-
-                        </div>
-
-                        <div class="timeline-description">
-
-                            <ul>
-                                <li>
-                                    Instalación y configuración de sistemas
-                                    empresariales.
-                                </li>
-
-                                <li>
-                                    Administración y soporte de SAP, CONTPAQi y
-                                    SICAR.
-                                </li>
-
-                                <li>
-                                    Configuración de equipos, impresoras, redes
-                                    y servidores.
-                                </li>
-
-                                <li>
-                                    Respaldos y recuperación de bases de datos.
-                                </li>
-
-                                <li>
-                                    Atención y seguimiento de incidencias
-                                    técnicas.
-                                </li>
-
-                                <li>
-                                    Elaboración de manuales y capacitación a
-                                    usuarios.
+                                    Coordinación y liderazgo de un equipo de
+                                    cuatro desarrolladores.
                                 </li>
                             </ul>
 
@@ -1501,23 +1367,24 @@
                                 </h3>
 
                                 <p class="timeline-company">
-                                    Nombre de la universidad o tecnológico
+                                    Instituto Tecnológico Nacional de México en Celaya
                                 </p>
 
                             </div>
 
                             <span class="timeline-date">
-                                2018 - 2023
+                                En curso
                             </span>
 
                         </div>
 
                         <div class="timeline-description">
 
-                            Formación en desarrollo de software, bases de datos,
-                            redes, sistemas operativos, seguridad informática,
-                            ingeniería de software, servicios web y
-                            administración de proyectos tecnológicos.
+                            Formación en lenguajes y autómatas, bases de datos,
+                            desarrollo de software, ingeniería de software y
+                            trabajo colaborativo en proyectos multidisciplinarios.
+                            Actualmente cursando Lenguajes y Autómatas II
+                            (Grupo 7B).
 
                         </div>
 
@@ -1541,18 +1408,28 @@
                             </span>
 
                             <h3 class="project-title">
-                                Sistema administrativo empresarial
+                                Mini Compilador de Consultas SQL
                             </h3>
 
                             <p class="project-stack">
-                                Laravel · Vue.js · PostgreSQL · AWS
+                                ANTLR4 · Python · Streamlit
                             </p>
 
                             <p class="project-description">
-                                Desarrollo de módulos para usuarios,
-                                inventarios, movimientos, documentos, reportes
-                                y procesos administrativos.
+                                Analizador léxico, sintáctico y semántico para
+                                consultas SQL, con interfaz interactiva
+                                desarrollada en Streamlit.
                             </p>
+
+                            <a
+                                class="project-link"
+                                href="https://github.com/AlanVD6/proyectopersonal"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <i class="fa-brands fa-github"></i>
+                                Ver repositorio
+                            </a>
 
                         </article>
 
@@ -1563,61 +1440,17 @@
                             </span>
 
                             <h3 class="project-title">
-                                Plataforma de documentos digitales
+                                Panel de Proveedores (SRS)
                             </h3>
 
                             <p class="project-stack">
-                                Laravel · React · API REST · PostgreSQL
+                                Laravel · Vue 3 · Inertia.js · PostgreSQL
                             </p>
 
                             <p class="project-description">
-                                Formularios administrativos, códigos QR,
-                                generación de PDF, validación por token y
-                                almacenamiento seguro de archivos.
-                            </p>
-
-                        </article>
-
-                        <article class="project-card">
-
-                            <span class="project-number">
-                                03
-                            </span>
-
-                            <h3 class="project-title">
-                                Integración de sistemas empresariales
-                            </h3>
-
-                            <p class="project-stack">
-                                SAP · CONTPAQi · SICAR · Power BI
-                            </p>
-
-                            <p class="project-description">
-                                Procesamiento de información comercial,
-                                contable y administrativa para automatizar
-                                reportes y análisis de datos.
-                            </p>
-
-                        </article>
-
-                        <article class="project-card">
-
-                            <span class="project-number">
-                                04
-                            </span>
-
-                            <h3 class="project-title">
-                                Infraestructura y servicios en la nube
-                            </h3>
-
-                            <p class="project-stack">
-                                AWS · Linux · Docker · GitHub
-                            </p>
-
-                            <p class="project-description">
-                                Configuración de ambientes, despliegue de
-                                aplicaciones, respaldos y administración de
-                                servicios web.
+                                Desarrollo y documentación técnica de un panel
+                                de operaciones para proveedores, como parte de
+                                un equipo de cuatro desarrolladores.
                             </p>
 
                         </article>
@@ -1642,12 +1475,12 @@
                             </span>
 
                             <h3 class="competency-title">
-                                Desarrollo web
+                                Desarrollo de software
                             </h3>
 
                             <p class="competency-description">
-                                Laravel, Vue.js, React, Angular, JavaScript,
-                                TypeScript, Bulma, Tailwind CSS, HTML y CSS.
+                                Java, Python, ANTLR4, control de versiones con
+                                Git y GitHub.
                             </p>
 
                         </article>
@@ -1663,9 +1496,8 @@
                             </h3>
 
                             <p class="competency-description">
-                                PostgreSQL, MySQL, SQL Server, MongoDB,
-                                respaldos, migraciones y optimización de
-                                consultas.
+                                Diseño, administración y consultas en
+                                PostgreSQL.
                             </p>
 
                         </article>
@@ -1673,16 +1505,16 @@
                         <article class="competency-card">
 
                             <span class="competency-icon">
-                                <i class="fa-solid fa-cloud"></i>
+                                <i class="fa-solid fa-desktop"></i>
                             </span>
 
                             <h3 class="competency-title">
-                                Nube e infraestructura
+                                Aplicaciones de escritorio
                             </h3>
 
                             <p class="competency-description">
-                                AWS, Linux, Docker, servidores web,
-                                almacenamiento y despliegue de aplicaciones.
+                                Creación de aplicaciones de escritorio con
+                                Python.
                             </p>
 
                         </article>
@@ -1690,150 +1522,17 @@
                         <article class="competency-card">
 
                             <span class="competency-icon">
-                                <i class="fa-solid fa-building"></i>
+                                <i class="fa-solid fa-users"></i>
                             </span>
 
                             <h3 class="competency-title">
-                                Sistemas empresariales
+                                Liderazgo de equipos
                             </h3>
 
                             <p class="competency-description">
-                                SAP, CONTPAQi, SICAR, Microsoft 365, Excel
-                                avanzado, Power BI y herramientas de soporte.
+                                Coordinación de equipos de desarrollo y
+                                documentación técnica en proyectos escolares.
                             </p>
-
-                        </article>
-
-                    </div>
-
-                </section>
-
-                <!-- Cursos -->
-                <section class="content-card">
-
-                    <h2 class="content-heading">
-                        Cursos y certificaciones
-                    </h2>
-
-                    <div class="course-grid">
-
-                        <article class="course-card">
-
-                            <span class="course-icon">
-                                <i class="fa-solid fa-code"></i>
-                            </span>
-
-                            <div>
-
-                                <h3 class="course-title">
-                                    Desarrollo web con Laravel
-                                </h3>
-
-                                <p class="course-description">
-                                    Institución o plataforma, 2025
-                                </p>
-
-                            </div>
-
-                        </article>
-
-                        <article class="course-card">
-
-                            <span class="course-icon">
-                                <i class="fa-brands fa-vuejs"></i>
-                            </span>
-
-                            <div>
-
-                                <h3 class="course-title">
-                                    Desarrollo Frontend con Vue y React
-                                </h3>
-
-                                <p class="course-description">
-                                    Institución o plataforma, 2025
-                                </p>
-
-                            </div>
-
-                        </article>
-
-                        <article class="course-card">
-
-                            <span class="course-icon">
-                                <i class="fa-brands fa-aws"></i>
-                            </span>
-
-                            <div>
-
-                                <h3 class="course-title">
-                                    Servicios en la nube con AWS
-                                </h3>
-
-                                <p class="course-description">
-                                    Institución o plataforma, 2025
-                                </p>
-
-                            </div>
-
-                        </article>
-
-                        <article class="course-card">
-
-                            <span class="course-icon">
-                                <i class="fa-solid fa-database"></i>
-                            </span>
-
-                            <div>
-
-                                <h3 class="course-title">
-                                    Administración de PostgreSQL
-                                </h3>
-
-                                <p class="course-description">
-                                    Institución o plataforma, 2024
-                                </p>
-
-                            </div>
-
-                        </article>
-
-                        <article class="course-card">
-
-                            <span class="course-icon">
-                                <i class="fa-brands fa-git-alt"></i>
-                            </span>
-
-                            <div>
-
-                                <h3 class="course-title">
-                                    Git, GitHub y Docker
-                                </h3>
-
-                                <p class="course-description">
-                                    Institución o plataforma, 2024
-                                </p>
-
-                            </div>
-
-                        </article>
-
-                        <article class="course-card">
-
-                            <span class="course-icon">
-                                <i class="fa-solid fa-building"></i>
-                            </span>
-
-                            <div>
-
-                                <h3 class="course-title">
-                                    SAP, CONTPAQi y sistemas empresariales
-                                </h3>
-
-                                <p class="course-description">
-                                    Institución o plataforma, 2024
-                                </p>
-
-                            </div>
 
                         </article>
 
